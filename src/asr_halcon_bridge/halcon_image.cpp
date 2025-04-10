@@ -18,7 +18,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 #include <asr_halcon_bridge/halcon_image.h>
 #include <sensor_msgs/image_encodings.hpp>
-#include <boost/make_shared.hpp>
 
 namespace halcon_bridge {
 

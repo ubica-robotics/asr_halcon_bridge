@@ -26,7 +26,7 @@ namespace halcon_bridge {
 
     class HalconPointcloud;
 
-    typedef boost::shared_ptr<HalconPointcloud> HalconPointcloudPtr;
+    typedef std::shared_ptr<HalconPointcloud> HalconPointcloudPtr;
 
     /**
      * \brief PointCloud message class that is interoperable with sensor_msgs/PointCloud2 but uses a HObjectModel3D representation for the point cloud data.

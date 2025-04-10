@@ -16,7 +16,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 #include <asr_halcon_bridge/halcon_pointcloud.h>
-#include <boost/make_shared.hpp>
 
 #include <sensor_msgs/msg/PointCloud2.hpp>
 #include <sensor_msgs/msg/PointField.hpp>
@@ -42,7 +41,7 @@ namespace halcon_bridge {
     }
 
     sensor_msgs::PointCloud2Ptr HalconPointcloud::toPointcloudMsg() const {
-        sensor_msgs::PointCloud2Ptr ptr = boost::make_shared<sensor_msgs::PointCloud2>();
+        sensor_msgs::PointCloud2Ptr ptr = std::make_shared<sensor_msgs::PointCloud2>();
         toPointcloudMsg(*ptr);
         return ptr;
     }
@@ -173,7 +172,7 @@ namespace halcon_bridge {
     }
 
     HalconPointcloudPtr toHalconCopy(const sensor_msgs::PointCloud2& source) {
-        HalconPointcloudPtr ptr = boost::make_shared<HalconPointcloud>();
+        HalconPointcloudPtr ptr = std::make_shared<HalconPointcloud>();
         ptr->header = source.header;
 
 
